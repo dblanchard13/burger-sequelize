@@ -4,7 +4,7 @@
   </div>
   <div class = "row">
     <div class = "col-sm-4">
-      <h2>Burgers on the Menu!</h2>
+      <h2 style= "text-align: center">Burgers on the Menu!</h2>
       <ul>
         {{#each Burger}}
           {{#unless this.dataValues.devoured}}
@@ -13,25 +13,28 @@
 
               <form action="/{{this.dataValues.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
-                <button type="submit">Eat This!</button>
+                <button type="submit" class = "btn btn-info">Eat This!</button>
               </form>
             </li>
+            <hr>
           {{/unless}}
         {{/each}}
       </ul>
     </div>
 
     <div class = "col-sm-4">
-        <h2> Have a Happy Burger </h2>
+        <h2 style="text-align: center"> Have a Happy Burger </h2>
+        <img src=  "./assets/images/burger.jpg" class = "img-responsive">
     </div>
     <div class = "col-sm-4">
-      <h2>Eaten Burger!</h2>
+      <h2 style= "text-align: center">Eaten Burger!</h2>
       <ul>
         {{#each Burger}}
           {{#if this.devoured}}
             <li>
               {{this.id}}: {{this.burger_name}}
             </li>
+            <hr>
           {{/if}}
         {{/each}}
       </ul>
@@ -45,7 +48,7 @@
         <label for="ca">Burger Name:</label>
         <input type="text" id="ca" name="burger_name">
       </div>
-      <button type="submit">Add Burger</button>
+      <button type="submit" class = "btn btn-primary">Add Burger</button>
     </form>
   </div>
 </div>

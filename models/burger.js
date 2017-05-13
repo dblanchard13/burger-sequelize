@@ -10,6 +10,23 @@ module.exports = function(sequelize, DataTypes) {
           type: DataTypes.BOOLEAN,
           defaultValue: false
       }
-  });
+  }//,
+    // {
+    //   // We're saying that we want our Author to have Posts
+    //   classMethods: 
+    //   {
+    //     associate: function(models) 
+    //     {
+    //       Burger.belongsTo(models.Eater, 
+    //       {
+    //         foreignKey: 
+    //         {
+    //           allowNull: false
+    //         }
+    //       });
+    //     }
+    //   }
+    // }
+    );
   return Burger;
 };
